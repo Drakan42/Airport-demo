@@ -1,0 +1,14 @@
+version: '3'
+services:
+  webapp:
+    image: "danielalarcao/airport-spring-boot-docker_webapp:latest"
+    links:
+      - mysql
+  mysql:
+    image: "danielalarcao/airport-spring-boot-docker_mysql"
+  nginx:
+    depends_on:
+      - webapp
+    image: "danielalarcao/airport-spring-boot-docker_nginx"
+    ports:
+      - "8080:8080"

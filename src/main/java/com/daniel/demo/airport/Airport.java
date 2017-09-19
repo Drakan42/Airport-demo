@@ -3,11 +3,14 @@ package com.daniel.demo.airport;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.List;
 
 import com.daniel.demo.runway.Runway;
+import org.springframework.data.annotation.Transient;
 
 @Entity
+@Table(name = "airports")
 public class Airport {
 	
 	@Id
@@ -37,7 +40,8 @@ public class Airport {
 	public void setRunway(List<Runway> runway) {
 		this.runways = runway;
 	}
-	private long c;
+	@Transient
+	private transient long c;
 
 	
 	public Long getId() {

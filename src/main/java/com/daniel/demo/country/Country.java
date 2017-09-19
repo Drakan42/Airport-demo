@@ -2,8 +2,10 @@ package com.daniel.demo.country;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "countries")
 public class Country {
 
 	@Id

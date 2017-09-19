@@ -1,13 +1,11 @@
 package com.daniel.demo.runway;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 import com.daniel.demo.airport.Airport;
 
 @Entity
+@Table(name = "runways")
 public class Runway {
 
 	@Id
@@ -16,7 +14,7 @@ public class Runway {
 	private String length_ft; 
 	private String width_ft; 
 	private String surface; 
-	private Boolean lighted; 
+	private Boolean lighted;
 	private Boolean closed; 
 	private String le_ident; 
 	private String le_latitude_deg; 
