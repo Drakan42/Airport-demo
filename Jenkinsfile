@@ -7,10 +7,10 @@ pipeline {
                 echo 'Building..'
                 withMaven (
                     maven: 'myMaven',
+                    mavenSettingsConfig:'pom.xml',
                     sh: 'clean compile'
                 )
             }
         }
-
     }
 }
