@@ -8,6 +8,7 @@ pipeline {
                 withMaven (
                     maven: 'myMaven',
                     mavenSettingsConfig:'pom.xml',
+                    jdk:'8',
                     sh: 'clean compile'
                 )
             }
