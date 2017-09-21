@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps{
+                echo 'Compiling ....'
                 withMaven (maven: 'MyMaven') {
                     sh 'mvn clean compile'
                 }
@@ -28,3 +29,4 @@ pipeline {
         }
     }
 }
+
