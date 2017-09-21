@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            step{
+            steps{
                 withMaven (
                     maven: 'myMaven',
                     mavenSettingsConfig:'pom.xml') {
