@@ -4,12 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                step {
-                    withMaven(
-                            maven: 'myMaven',
-                            mavenSettingsConfig: 'pom.xml') {
-                        sh: 'mvn clean compile'
-                    }
+                withMaven (maven: 'myMaven') {
+                    sh 'mvn clean compile'
                 }
             }
         }
